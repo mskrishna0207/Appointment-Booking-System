@@ -1,0 +1,29 @@
+.big_container{
+    width: 50%;
+    margin-top: 60px;
+    margin-left: 400px;
+    border: 2px solid black;
+    padding: 15px;
+    background-color:skyblue;
+}
+.btn-container{
+    padding: 10px;
+    margin-left: 800px;
+}
+.form-group input{
+    width: 100%;
+}
+.form-group label{
+    font-style:italic;
+    font-weight: 500;
+}
+.btn{
+    margin-left: 500px;
+}
+.btn button{
+    margin: 5px;
+    font-style: oblique;
+    font-weight: 500;
+    background-color: white;
+    color: black;
+}

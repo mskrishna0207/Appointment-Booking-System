@@ -1,0 +1,59 @@
+<div class="nav" style="background-color:orange; color: white; padding: 1px;">
+       <h3 style="padding: 5px; margin-left: 600px; font-family: 'Times New Roman', Times, serif;">Appointment Booking</h3>
+</div>
+<div class="big_container">
+        <form #bookingForm="ngForm" (ngSubmit)="savedetails(bookingForm)">
+            <div class="form-group">
+                <label>Patient Name:</label>
+                <input type="text" class="form-control" name="patientname" id="patientname" ngModel>
+            </div>
+            <div class="form-group">
+                <label>Appointment date:</label>
+                <input type="date" class="form-control" name="date" id="date" ngModel>
+            </div>
+            <div class="form-group">
+                <label>Session slot:</label>
+                <select class="form-control" name="slot" ngModel>
+                    <option>Morning</option>
+                    <option>Evening</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Status:</label>
+                <select class="form-control" name="status" ngModel>
+                    <option>Free</option>
+                    <option>Booked</option>
+                    <option>OverBooked</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Specialty:</label>
+                <select class="form-control" name="specialty" ngModel>
+                    <option>Neuralogist</option>
+                    <option>Cardialogist</option>
+                    <option>Dentist</option>
+                    <option>Gynacologist</option>
+                    <option>ENT</option>
+                    <option>Dermatologist</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Consultant:</label>
+                <br>
+                <select class="form-control" name="consultant" ngModel>
+                    <option>Benjimen</option>
+                    <option>GK.Reddy</option>
+                    <option>Michael</option>
+                    <option>John</option>
+                    <option>Kaleem</option>
+                    <option>Adam</option>
+                </select>
+            </div>
+            <div class="btn">
+                <button type="submit" class="search-btn" ngModel>
+                    Submit
+                </button>
+                <button type="submit" (click)="refreshPage()">Clear</button>
+            </div>
+    </form>
+</div>

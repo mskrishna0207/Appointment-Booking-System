@@ -1,0 +1,31 @@
+<div class="nav" style="background-color: orange; color: white; padding: 1px;">
+    <h5 style="padding: 5px; margin-left: 200px;">Hii.. {{this.patientname}} !! Time to book your slot</h5>
+</div>
+
+<table class = "table table-striped">
+    <thead style="background-color: grey;">
+        <tr>
+            <th> ID</th>
+            <th> Booking</th>
+            <th> consultant</th>
+            <th> specialty </th>
+            <th> slot</th>
+            <th> status </th>
+            <th> Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of bookings" >
+            <td> {{user.id}} </td>
+            <td> <a style="background-color: blue; color: white; padding:6px; border-radius: 6px;" (click)="onbooking(user.id,user)">Book</a></td>
+            <td> {{ user.consultant }} </td>
+            <td> {{ user.specialty }} </td>
+            <td> {{ user.slot }} </td>
+            <td> {{ user.status }} </td>
+            <td> <a style="background-color: red; color: white; padding:6px; border-radius: 6px" (click)="deleteBooking(user.id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<div class="prev-btn">
+    <button style="margin-left: 1400px; margin-top:50px;" routerLink="/bookings">Back</button>
+</div>
